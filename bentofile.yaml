@@ -1,0 +1,18 @@
+service: "src.service:vermont_admission"
+description: "Predict the chance of admission of a student in a university"
+labels:
+  owner: "vermont"
+  project: "Admissions Prediction"
+include:
+  - src/
+  - data/
+  - models/
+python:
+    packages:
+      - numpy
+      - pandas
+      - scikit-learn
+      - bentoml
+      - pydantic
+      - requests
+      - pyjwt
